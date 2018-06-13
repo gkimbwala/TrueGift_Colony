@@ -11,9 +11,9 @@
 
         <div class="w-1/3 text-center">
           <button
-            @click="active = 'devActivity'"
+            @click="active = 'devCreator'"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-            >Activity
+            >Creator
           </button>
 
           <button
@@ -23,9 +23,9 @@
           </button>
 
           <button
-            @click="active = 'devTimeline'"
+            @click="active = 'devStream'"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-            >Timeline
+            >Stream
           </button>
 
           <button
@@ -71,9 +71,9 @@
 <script>
 import devSearch from './search/dev-search'
 
-import devActivity from './dashboard/activity'
+import devCreator from './dashboard/creator'
 import devInsights from './dashboard/insights'
-import devTimeline from './dashboard/timeline'
+import devStream from './dashboard/stream'
 import devWorkflow from './dashboard/workflow'
 
 import devFeatured from './status/featured'
@@ -84,7 +84,7 @@ import devUpdates from './status/updates'
 export default {
   data () {
     return {
-      active: 'devActivity'
+      active: 'devStream'
     }
   },
   computed: {
@@ -97,9 +97,9 @@ export default {
   },
   components: {
     devSearch,
-    devActivity,
+    devCreator,
     devInsights,
-    devTimeline,
+    devStream,
     devWorkflow,
     devFeatured,
     devNew,
