@@ -1,21 +1,8 @@
 <template lang="html">
   <div class="">
-    <div class="w-full mb-4 bg-grey-lighter border border-grey-light">
-      <div class="h-80 relative flex flex-row items-center">
-        <div class="absolute z-10 p-4 w-full flex flex-row justify-between text-center">
-          <div class="w-1/4 border mx-4 h-32">
-            <p class="text-xs text-red-dark">TODO: metrics</p>
-          </div>
-          <div class="w-1/4 border mx-4 h-32">
-            <p class="text-xs text-red-dark">TODO: metrics</p>
-          </div>
-          <div class="w-1/4 border mx-4 h-32">
-            <p class="text-xs text-red-dark">TODO: metrics</p>
-          </div>
-          <div class="w-1/4 border mx-4 h-32">
-            <p class="text-xs text-red-dark">TODO: metrics</p>
-          </div>
-        </div>
+
+    <div class="w-full mb-4 bg-grey-lighter h-80 border border-grey-light">
+      <div class="h-80 relative flex flex-row justify-between">
         <div class="absolute z-10 p-4 pin-t w-full flex flex-row justify-between">
           <div class="w-1/3">
             <p class="text-xs text-red-dark">TODO: challenge.title</p>
@@ -29,13 +16,21 @@
 
             <div class="mr-2">
               <button
+                @click="active = 'insights'"
+                class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
+                >Insights
+              </button>
+            </div>
+
+            <div class="mr-2">
+              <button
                 @click="active = 'overview'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
                 >Overview
               </button>
             </div>
 
-            <div class="mr-2">
+            <div class="">
               <button
                 @click="active = 'people'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
@@ -43,13 +38,6 @@
               </button>
             </div>
 
-            <div class="">
-              <button
-                @click="active = 'insights'"
-                class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Scope
-              </button>
-            </div>
           </div>
         </div>
 
@@ -60,7 +48,7 @@
               <button
                 @click="active = 'discourse'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >TrueGift
+                >Discourse
               </button>
             </div>
 
@@ -68,7 +56,7 @@
               <button
                 @click="active = 'projects'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Domains
+                >Projects
               </button>
             </div>
 
@@ -76,7 +64,7 @@
               <button
                 @click="active = 'solutions'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Skills
+                >Solutions
               </button>
             </div>
 
@@ -93,24 +81,43 @@
 
       </div>
     </div>
-    {{ title }}: task, rep, skills, domains; statistics + analytics
-    <p>global scope: colony-wide - domain-wide</p>
-    <p>user scope</p>
-    <p>D3js</p>
-    <p>crossfilter</p>
+
+    <div class="">
+      <component :is="active">
+
+      </component>
+    </div>
 
   </div>
 </template>
 
 <script>
+import insights from '@/modules/dynamics/insights'
+import overview from '@/modules/dynamics/overview'
+import people from '@/modules/dynamics/people'
+import discourse from '@/modules/discourse/discourse'
+
+import projects from '@/objects/projects/projects'
+import solutions from '@/objects/solutions/solutions'
+import tasks from '@/objects/tasks/workload'
+
 export default {
   data () {
     return {
-      title: 'insights'
+      active: 'overview'
     }
+  },
+  components: {
+    overview,
+    insights,
+    people,
+    discourse,
+    projects,
+    solutions,
+    tasks
   }
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 </style>

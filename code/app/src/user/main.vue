@@ -1,13 +1,16 @@
 <template lang="html">
   <div class="">
-    <div class="text-base">
-      Featured
-    </div>
+    {{ name }}
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      name: 'user'
+    }
+  }
 }
 </script>
 

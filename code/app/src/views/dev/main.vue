@@ -69,17 +69,17 @@
 </template>
 
 <script>
-import devSearch from './search/dev-search'
+import devSearch from '@/modules/search/dev-search'
 
-import devCreator from './dashboard/creator'
-import devInsights from './dashboard/insights'
-import devStream from './dashboard/stream'
-import devWorkflow from './dashboard/workflow'
+import devCreator from '@/views/dev/dashboard/creator'
+import devInsights from '@/views/dev/dashboard/insights'
+import devStream from '@/views/dev/dashboard/stream'
+import devWorkflow from '@/views/dev/dashboard/workflow'
 
-import devFeatured from './status/featured'
-import devNew from './status/new'
-import devRequests from './status/requests'
-import devUpdates from './status/updates'
+import devFeatured from '@/modules/status/featured'
+import devNew from '@/modules/status/new'
+import devRequests from '@/modules/status/requests'
+import devUpdates from '@/modules/status/updates'
 
 export default {
   data () {

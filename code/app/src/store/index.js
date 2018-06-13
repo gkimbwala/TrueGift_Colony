@@ -9,6 +9,9 @@ export default new Vuex.Store({
   state,
 
   getters: {
+    getUser: state => {
+      return state.data.user
+    },
     getTests: state => {
       return state.data.tests
     },

@@ -1,5 +1,5 @@
 import storeMain from '@/views/store/main'
-import item from '@/views/store/items/item'
+import item from '@/objects/items/item'
 
 export default [
   {

@@ -8,10 +8,17 @@
     <div class="flex flex-row flex-wrap py-4">
       <div class="w-1/3" v-for="solution in solutions" v-bind:key="solution.id">
         <card>
-          <div class="h-80 text-center border border-grey-dark mb-4 mr-4">
-            <img src="@/assets/img/logo.png" alt="" class="">
-            <div class="">
-              <p class="">{{solution.title}}</p>
+          <p class="text-sm text-red-dark">TODO: Card</p>
+          <div class="h-64 border border-grey-dark mb-4 mr-4">
+            <div class="bg-purple-light h-48">
+              solution.img
+            </div>
+            <div class="p-2">
+              <router-link
+              :to="{ name: 'solution', params: { id: solution.id } }"
+              class="no-underline"
+              >{{solution.title}}
+            </router-link>
             </div>
           </div>
         </card>
@@ -23,7 +30,6 @@
 
 <script>
 import card from '@/components/elements/card'
-import grid from '@/components/layout/grid'
 
 export default {
   computed: {
@@ -33,8 +39,7 @@ export default {
   },
 
   components: {
-    card,
-    grid
+    card
   }
 }
 </script>

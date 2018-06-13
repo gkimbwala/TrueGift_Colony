@@ -2,7 +2,13 @@
 
 export default {
   data: {
-    dappTitle: 'truegift.io',
+    dappTitle: 'truegift',
+
+    user: {
+      id: 0,
+      fName: 'user',
+      lName: 'default'
+    },
 
     tests: [
       { id: 0, title: 'test1' },

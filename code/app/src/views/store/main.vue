@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import itemList from './items/item-list'
+import itemList from '@/objects/items/item-list'
 export default {
   data () {
     return {

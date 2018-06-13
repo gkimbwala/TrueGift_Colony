@@ -6,6 +6,7 @@ import devRoutes from './dev.routes.js'
 import opsRoutes from './ops.routes.js'
 import repoRoutes from './repo.routes.js'
 import storeRoutes from './store.routes.js'
+import userRoutes from './user.routes.js'
 
 Vue.use(Router)
 
@@ -16,7 +17,8 @@ const routes = baseRoutes.concat(
   devRoutes,
   opsRoutes,
   repoRoutes,
-  storeRoutes
+  storeRoutes,
+  userRoutes
 )
 
 export default new Router({

@@ -5,7 +5,7 @@
       <div class="h-80 relative flex flex-row justify-between">
         <div class="absolute z-10 p-4 pin-t w-full flex flex-row justify-between">
           <div class="w-1/3">
-            <p class="text-xs text-red-dark">TODO: challenge.title</p>
+            <p class="text-xs text-red-dark">TODO: project.title</p>
           </div>
           <div class="w-1/3 text-right">
             <p class="text-xs text-red-dark">TODO: user-menu</p>
@@ -92,14 +92,14 @@
 </template>
 
 <script>
-import insights from './dynamics/scope/insights'
-import overview from './dynamics/scope/overview'
-import people from './dynamics/scope/people'
+import insights from '@/modules/dynamics/insights'
+import overview from '@/modules/dynamics/overview'
+import people from '@/modules/dynamics/people'
+import discourse from '@/modules/discourse/discourse'
 
-import discourse from './dynamics/actions/discourse'
-import projects from './dynamics/actions/projects'
-import solutions from './dynamics/actions/solutions'
-import tasks from './dynamics/actions/tasks'
+import projects from '@/objects/projects/projects'
+import solutions from '@/objects/solutions/solutions'
+import tasks from '@/objects/tasks/workload'
 
 export default {
   data () {

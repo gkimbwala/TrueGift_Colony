@@ -1,5 +1,6 @@
 import repoMain from '@/views/repo/main'
-import challenge from '@/views/repo/challenges/challenge'
+import challenge from '@/objects/challenges/challenge'
+import solution from '@/objects/solutions/solution'
 
 export default [
   {
@@ -11,6 +12,12 @@ export default [
     name: 'challenge',
     path: '/challenge/:id',
     component: challenge,
+    props: true
+  },
+  {
+    name: 'solution',
+    path: '/solution/:id',
+    component: solution,
     props: true
   }
 ]

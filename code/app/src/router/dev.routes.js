@@ -1,5 +1,5 @@
 import devMain from '@/views/dev/main'
-import task from '@/views/dev/tasks/task'
+import task from '@/objects/tasks/task'
 
 export default [
   {

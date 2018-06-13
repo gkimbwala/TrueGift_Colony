@@ -1,22 +1,22 @@
-import opsMain from '@/views/ops/main'
-import userComp from '@/views/ops/user-comp'
-import userId from '@/views/ops/user-id'
+import mainView from '@/views/main'
+import testComp from '@/views/test-comp'
+import testId from '@/views/test-id'
 
 export default [
   {
-    name: 'ops-main',
-    path: '/ops',
-    component: opsMain
+    name: 'main',
+    path: '/',
+    component: mainView
   },
   {
-    name: 'user-comp',
-    path: '/user',
-    component: userComp
+    name: 'test-comp',
+    path: '/test',
+    component: testComp
   },
   {
-    name: 'user-id',
-    path: '/user/:id',
-    component: userId,
+    name: 'test-id',
+    path: '/test/:id',
+    component: testId,
     props: true
   }
 ]

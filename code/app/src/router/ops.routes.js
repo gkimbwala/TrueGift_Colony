@@ -1,22 +1,9 @@
-import mainView from '@/views/main'
-import testComp from '@/views/test-comp'
-import testId from '@/views/test-id'
+import opsMain from '@/views/ops/main'
 
 export default [
   {
-    name: 'mainview',
-    path: '/',
-    component: mainView
-  },
-  {
-    name: 'test-comp',
-    path: '/test',
-    component: testComp
-  },
-  {
-    name: 'test-id',
-    path: '/test/:id',
-    component: testId,
-    props: true
+    name: 'ops-main',
+    path: '/ops',
+    component: opsMain
   }
 ]

@@ -51,14 +51,14 @@
 </template>
 
 <script>
-import repoSearch from './search/repo-search'
+import repoSearch from '@/modules/search/repo-search'
 
-import challengeList from './challenges/challenge-list'
+import challengeList from '@/objects/challenges/challenge-list'
 
-import repoFeatured from './status/featured'
-import repoNew from './status/new'
-import repoRequests from './status/requests'
-import repoUpdates from './status/updates'
+import repoFeatured from '@/modules/status/featured'
+import repoNew from '@/modules/status/new'
+import repoRequests from '@/modules/status/requests'
+import repoUpdates from '@/modules/status/updates'
 
 export default {
   data () {
