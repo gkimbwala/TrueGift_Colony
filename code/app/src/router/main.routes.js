@@ -2,6 +2,8 @@ import mainView from '@/views/main'
 import testComp from '@/views/test-comp'
 import testId from '@/views/test-id'
 
+import search from '@/modules/search/search'
+
 export default [
   {
     name: 'main',
@@ -18,5 +20,10 @@ export default [
     path: '/test/:id',
     component: testId,
     props: true
+  },
+  {
+    name: 'search',
+    path: '/s',
+    component: search
   }
 ]

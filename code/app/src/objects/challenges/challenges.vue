@@ -1,10 +1,6 @@
 <template lang="html">
   <div class="">
 
-    <div class="text-base">
-      Challenges
-    </div>
-
     <div class="flex flex-row flex-wrap py-4">
       <div class="w-1/3" v-for="challenge in challenges" v-bind:key="challenge.id">
         <card>

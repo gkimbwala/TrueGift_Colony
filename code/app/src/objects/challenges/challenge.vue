@@ -4,11 +4,18 @@
     <div class="w-full mb-4 bg-grey-lighter h-80 border border-grey-light">
       <div class="h-80 relative flex flex-row justify-between">
         <div class="absolute z-10 p-4 pin-t w-full flex flex-row justify-between">
-          <div class="w-1/3">
-            <p class="text-xs text-red-dark">TODO: challenge.title</p>
-          </div>
-          <div class="w-1/3 text-right">
-            <p class="text-xs text-red-dark">TODO: user-menu</p>
+          <div class="w-1/2 flex flex-row">
+            <router-link
+              :to="{ name: 'repo-main' }"
+              class="text-grey-dark p-2 text-xs hover:text-grey-darker"
+              tag="button"
+              >Challenges
+            </router-link>
+            <button class="text-grey-dark text-xs" disabled>|</button>
+            <button
+              class="text-grey-dark p-2 text-xs hover:text-grey-darker"
+              >{{ title }}
+            </button>
           </div>
         </div>
         <div class="absolute z-10 py-2 px-4 pin-b w-1/2">
@@ -104,7 +111,8 @@ import tasks from '@/objects/tasks/workload'
 export default {
   data () {
     return {
-      active: 'overview'
+      active: 'overview',
+      title: 'challenge.title'
     }
   },
   components: {
