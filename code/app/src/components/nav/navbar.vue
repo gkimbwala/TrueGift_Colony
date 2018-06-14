@@ -9,7 +9,7 @@
           >{{ dappTitle }}
         </router-link>
         <router-link
-          :to="{ name: 'dev-main' }"
+          :to="{ name: 'dev-activity' }"
           class="text-grey text-sm mr-2 no-underline hover:text-grey-darker"
           >Dev
         </router-link>
@@ -39,7 +39,7 @@
           tag="button"
           >S</router-link>
         <router-link
-          :to="{ name: 'user', params: { id: user.id } }"
+          :to="{ name: 'user', params: { name: user.fName } }"
           class="bg-grey-darker p-1 rounded-sm text-xs text-grey-lightest shadow-inner no-underline hover:bg-grey-darkest"
           tag="button"
           >{{ user.fName }}

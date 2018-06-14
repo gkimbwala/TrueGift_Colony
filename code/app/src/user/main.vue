@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="">
-    {{ name }}
+    <router-view></router-view>
+    {{ user.fName }}
     <div class="w-1/4">
       <lineGraph></lineGraph>
     </div>
@@ -9,13 +10,16 @@
 
 <script>
 import lineGraph from '@/modules/dynamics/graphs/line-graph'
+
 export default {
-  data () {
-    return {
-      name: 'user'
+  computed: {
+    user () {
+      return this.$store.getters.getUser
     }
   },
-  components: { lineGraph }
+  components: {
+    lineGraph
+  }
 }
 </script>
 

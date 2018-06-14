@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="pl-4">
+    <div class="">
       <component :is="active">
       </component>
     </div>

@@ -13,9 +13,6 @@
           <div class="w-1/3">
             <p class="text-xs text-red-dark">TODO: task.title</p>
           </div>
-          <div class="w-1/3 text-right">
-            <p class="text-xs text-red-dark">TODO: user-menu</p>
-          </div>
         </div>
 
         <div class="absolute z-10 py-2 px-4 pin-b w-1/2">
@@ -87,10 +84,6 @@
 
       </div>
 
-      <!-- <task-list :items="tests">
-        <template slot-scope="test">
-        </template>
-      </task-list> -->
     </div>
   </div>
 </template>
@@ -106,9 +99,6 @@ export default {
   computed: {
     tasks () {
       return this.$store.getters.getTasks
-    },
-    tests () {
-      return this.$store.getters.getTests
     }
   },
   components: {

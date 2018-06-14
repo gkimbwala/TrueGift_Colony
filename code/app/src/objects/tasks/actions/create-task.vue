@@ -28,7 +28,7 @@
       <div class="w-3/8 flex flex-col justify-end">
         <div class="flex flex-row h-full w-full p-1">
           <div class="w-1/3 bg-green-dark p-2">
-            <p>user stats:</p>
+            <p>worker stats:</p>
             <p>- badges</p>
             <p>- skills coverage</p>
             <p>- domains</p>
@@ -39,7 +39,7 @@
         </div>
         <div class="flex flex-row h-full w-full px-1">
           <div class="w-1/3 bg-green-dark p-2">
-            <p>user stats:</p>
+            <p>manager stats:</p>
             <p>- badges</p>
             <p>- skills coverage</p>
             <p>- domains</p>
@@ -50,7 +50,7 @@
         </div>
         <div class="flex flex-row h-full w-full p-1">
           <div class="w-1/3 bg-green-dark p-2">
-            <p>user stats:</p>
+            <p>evaluator stats:</p>
             <p>- badges</p>
             <p>- skills coverage</p>
             <p>- domains</p>
@@ -71,11 +71,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      title: 'creator'
-    }
-  }
 }
 </script>
 
