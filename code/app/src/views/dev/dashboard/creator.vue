@@ -1,42 +1,71 @@
 <template lang="html">
-  <div class="p-4">
-    <p class="text-xs text-red-dark mb-4">TODO: selector / task / challenge / domain</p>
-    <div class="h-96 flex flex-row">
-      <div class="w-2/5 bg-blue flex flex-col">
-        <div class="h-64 bg-blue-dark">
-          task.img
-        </div>
-        task.title
+  <div class="">
+    <div class="h-64 flex flex-row">
+      <div class="w-1/4 bg-blue p-2">
+        <p>contract.computed:</p>
+        <p>gasPrice</p>
       </div>
-      <div class="w-3/5 bg-purple">
-        <p>task.details</p>
+      <div class="w-5/8 bg-purple p-2">
+        <p>contract.options:</p>
         <p>dueDate</p>
-        <p>domainId</p>
+        <p>domain</p>
         <p>skills</p>
+      </div>
+      <div class="w-1/8 flex flex-col items-center justify-between bg-grey-lighter">
+        <div class="flex flex-col m-2">
+          <button class="w-16 mb-1 bg-green-dark text-xs text-grey-lightest p-1 rounded-sm">Create</button>
+          <button class="w-16 mb-1 bg-orange-dark text-xs text-grey-lightest p-1 rounded-sm">Save</button>
+          <button class="w-16 bg-red-dark text-xs text-grey-lightest p-1 rounded-sm">Cancel</button>
+        </div>
+        <div class="h-full w-full bg-green p-2">
+          fn progress:
+          <p class="text-xs">- create</p>
+          <p class="text-xs">- save</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row h-160">
+      <div class="w-3/8 flex flex-col justify-end">
+        <div class="flex flex-row h-full w-full p-1">
+          <div class="w-1/3 bg-green-dark p-2">
+            <p>user stats:</p>
+            <p>- badges</p>
+            <p>- skills coverage</p>
+            <p>- domains</p>
+          </div>
+          <div class="w-2/3 bg-orange p-2">
+            selected worker
+          </div>
+        </div>
+        <div class="flex flex-row h-full w-full px-1">
+          <div class="w-1/3 bg-green-dark p-2">
+            <p>user stats:</p>
+            <p>- badges</p>
+            <p>- skills coverage</p>
+            <p>- domains</p>
+          </div>
+          <div class="w-2/3 bg-orange p-2">
+            selected manager
+          </div>
+        </div>
+        <div class="flex flex-row h-full w-full p-1">
+          <div class="w-1/3 bg-green-dark p-2">
+            <p>user stats:</p>
+            <p>- badges</p>
+            <p>- skills coverage</p>
+            <p>- domains</p>
+          </div>
+          <div class="w-2/3 bg-orange p-2">
+            selected evaluator
+          </div>
+        </div>
+      </div>
+      <div class="w-5/8 bg-purple-dark p-2">
+        <p>user search</p>
+        <p>user comparison</p>
+      </div>
+    </div>
 
-      </div>
-    </div>
-    <div class="flex flex-row w-full">
-      <div class="w-1/4 bg-orange-light h-80">
-        <p>Roles</p>
-        <p class="text-xs text-red-dark">TODO: user search</p>
-      </div>
-      <div class="w-1/4 bg-orange h-80 border text-center">
-        Worker
-      </div>
-      <div class="w-1/4 bg-orange h-80 border text-center">
-        Manager
-      </div>
-      <div class="w-1/4 bg-orange h-80 border text-center">
-        Evaluator
-      </div>
-    </div>
-    <div class="">
-      <p class="my-2">actions:</p>
-      <button class="bg-green-dark text-sm p-1 rounded-sm">create</button>
-      <button class="bg-yellow-dark text-sm p-1 rounded-sm">save draft</button>
-      <button class="bg-red-dark text-sm p-1 rounded-sm">cancel</button>
-    </div>
   </div>
 </template>
 

@@ -53,7 +53,7 @@
 <script>
 import repoSearch from '@/modules/search/repo-search'
 
-import challengeList from '@/objects/challenges/challenge-list'
+import challengeList from '@/objects/challenges/challenge'
 
 import repoFeatured from '@/modules/status/featured'
 import repoNew from '@/modules/status/new'

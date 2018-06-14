@@ -38,7 +38,7 @@ export default {
       return this.$store.getters.getSolutions
     }
   },
-
+  props: ['id'],
   components: {
     card
   }
