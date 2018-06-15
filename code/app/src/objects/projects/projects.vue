@@ -37,10 +37,8 @@ export default {
       return this.$store.getters.getProjects
     }
   },
-  props: ['id'],
-  components: {
-    card
-  }
+  components: { card },
+  props: ['id']
 }
 </script>
 

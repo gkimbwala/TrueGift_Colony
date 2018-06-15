@@ -1,20 +1,11 @@
 <template lang="html">
   <div class="">
-    {{ comp }}
-
-    <p>Loaded ID: {{ id }}</p>
-
+    jobs
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      comp: 'testID'
-    }
-  },
-  props: ['id']
 }
 </script>
 

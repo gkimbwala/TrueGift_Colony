@@ -32,7 +32,7 @@
       <div class="w-1/3 text-center">
 
         <router-link
-          :to="{ name: 'user-workflow', params: { name: user.fName }}"
+          :to="{ name: 'user-workflow', params: { name: user.fName } }"
           @click="active = 'devWorkflow'"
           class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
           tag="button"
@@ -41,6 +41,7 @@
       </div>
 
         <div class="w-1/3 text-right">
+
         </div>
 
     </div>

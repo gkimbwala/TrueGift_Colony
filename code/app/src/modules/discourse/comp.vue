@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    {{ title }}: searchable list, sortable by contributions, reputation, skills
+    {{ title }}
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      title: 'people'
+      title: 'comp'
     }
   }
 }

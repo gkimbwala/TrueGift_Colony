@@ -14,19 +14,15 @@
           >Dev
         </router-link>
         <router-link
-          :to="{ name: 'ops-main' }"
-          class="text-grey text-sm mr-2 no-underline hover:text-grey-darker"
-          >Ops
-        </router-link>
-        <router-link
           :to="{ name: 'repo-main' }"
           class="text-grey text-sm mr-2 no-underline hover:text-grey-darker"
           >Repo
         </router-link>
         <router-link
-          :to="{ name: 'store-main' }"
-          class="text-grey text-sm no-underline hover:text-grey-darker"
-          >Store
+          :to="{ name: 'discourse' }"
+          class="bg-grey-darker p-1 rounded-sm text-xs text-grey-lightest shadow-inner no-underline hover:bg-grey-darkest"
+          tag="button"
+          >Discourse
         </router-link>
       </div>
       <div class="w-1/3 text-right">

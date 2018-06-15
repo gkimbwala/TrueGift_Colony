@@ -24,6 +24,11 @@ export default new Vuex.Store({
     getChallenges: state => {
       return state.data.challenges
     },
+    getChallengeByID: (state, i) => {
+      if (state.data.challenges[i] === this.i) {
+        return state.data.challenges[i]
+      }
+    },
     getModels: state => {
       return state.data.models
     },

@@ -1,24 +1,20 @@
 <template lang="html">
-  <div class="p-4">
-
-    <div class="text-lg">
-      Blueprints: design components
-    </div>
-
+  <div class="">
+    {{ title }}: searchable list, sortable by contributions, reputation, skills
     <div class="flex flex-row flex-wrap py-4">
-      <div class="w-1/3" v-for="blueprint in blueprints" v-bind:key="blueprint.id">
+      <div class="w-1/3" v-for="person in people" v-bind:key="person.id">
         <card>
           <p class="text-sm text-red-dark">TODO: Card</p>
           <div class="h-64 border border-grey-dark mb-4 mr-4">
             <div class="bg-purple-light h-48">
-              blueprint.img
+              person.img
             </div>
             <div class="p-2">
               <router-link
-              :to="{ name: 'blueprint', params: { id: blueprint.id } }"
-              class="no-underline"
-              >{{blueprint.title}}
-            </router-link>
+                :to="{ name: 'people', params: { id: person.id } }"
+                class="no-underline"
+                >{{person.title}}
+              </router-link>
             </div>
           </div>
         </card>
@@ -32,15 +28,18 @@
 import card from '@/components/elements/card'
 
 export default {
-  computed: {
-    blueprints () {
-      return this.$store.getters.getModels
+  data () {
+    return {
+      title: 'people'
     }
   },
-  props: ['id'],
-  components: {
-    card
-  }
+  computed: {
+    people () {
+      return this.$store.getters.getChallenges
+    }
+  },
+  components: { card },
+  props: ['id']
 }
 </script>
 

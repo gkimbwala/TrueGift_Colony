@@ -60,9 +60,6 @@
 
 export default {
   computed: {
-    tasks () {
-      return this.$store.getters.getTasks
-    },
     user () {
       return this.$store.getters.getUser
     }
