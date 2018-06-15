@@ -54,17 +54,9 @@
 
             <div class="mr-2">
               <button
-                @click="active = 'projects'"
+                @click="active = 'opportunities'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Projects
-              </button>
-            </div>
-
-            <div class="mr-2">
-              <button
-                @click="active = 'solutions'"
-                class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Solutions
+                >Opportunities
               </button>
             </div>
 
@@ -92,13 +84,12 @@
 </template>
 
 <script>
-import insights from '@/modules/dynamics/insights'
+import insights from '@/modules/dynamics/insights/insights'
 import overview from '@/modules/dynamics/overview'
 import people from '@/modules/dynamics/people'
 import discourse from '@/modules/discourse/discourse'
 
-import projects from '@/objects/projects/projects'
-import solutions from '@/objects/solutions/solutions'
+import opportunities from '@/objects/opportunities/main'
 import tasks from '@/objects/tasks/workload'
 
 export default {
@@ -112,8 +103,7 @@ export default {
     insights,
     people,
     discourse,
-    projects,
-    solutions,
+    opportunities,
     tasks
   }
 }

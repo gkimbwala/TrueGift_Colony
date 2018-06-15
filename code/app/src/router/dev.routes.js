@@ -1,10 +1,12 @@
 import devMain from '@/views/dev/main'
-import task from '@/objects/tasks/task'
-import createTask from '@/objects/tasks/actions/create-task'
 
 import devActivity from '@/modules/activity/main'
 import devInsights from '@/views/dev/dashboard/insights'
 import devTasks from '@/objects/tasks/main'
+
+import taskSub from '@/objects/tasks/sub'
+import task from '@/objects/tasks/task'
+import createTask from '@/objects/tasks/actions/create-task'
 
 export default [
   {
@@ -22,16 +24,22 @@ export default [
         component: devInsights
       },
       {
-        name: 'dev-tasks',
         path: 'tasks',
-        component: devTasks
-      },
-      {
-        name: 'create-task',
-        path: 'task/create',
-        component: createTask
+        component: devTasks,
+        children: [
+          {
+            name: 'dev-tasks',
+            path: '',
+            component: taskSub
+          }
+        ]
       }
     ]
+  },
+  {
+    name: 'create-task',
+    path: 'task/create',
+    component: createTask
   },
   {
     name: 'task',

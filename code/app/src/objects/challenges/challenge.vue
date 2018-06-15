@@ -14,7 +14,7 @@
             <button class="text-grey-dark text-xs" disabled>|</button>
             <button
               class="text-grey-dark p-2 text-xs hover:text-grey-darker"
-              >{{ title }}
+              >challenge.title
             </button>
           </div>
         </div>
@@ -69,9 +69,9 @@
 
             <div class="mr-2">
               <button
-                @click="active = 'solutions'"
+                @click="active = 'models'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Solutions
+                >Models
               </button>
             </div>
 
@@ -99,20 +99,19 @@
 </template>
 
 <script>
-import insights from '@/modules/dynamics/insights'
+import insights from '@/modules/dynamics/insights/insights'
 import overview from '@/modules/dynamics/overview'
 import people from '@/modules/dynamics/people'
 import discourse from '@/modules/discourse/discourse'
 
 import projects from '@/objects/projects/projects'
-import solutions from '@/objects/solutions/solutions'
-import tasks from '@/objects/tasks/workload'
+import models from '@/objects/models/main'
+import tasks from '@/objects/tasks/sub'
 
 export default {
   data () {
     return {
-      active: 'overview',
-      title: 'challenge.title'
+      active: 'overview'
     }
   },
   components: {
@@ -120,8 +119,8 @@ export default {
     insights,
     people,
     discourse,
+    models,
     projects,
-    solutions,
     tasks
   }
 }

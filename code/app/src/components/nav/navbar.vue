@@ -59,7 +59,7 @@ export default {
       return this.$store.getters.getUser
     }
   },
-  props: ['id']
+  props: ['name']
 }
 </script>
 

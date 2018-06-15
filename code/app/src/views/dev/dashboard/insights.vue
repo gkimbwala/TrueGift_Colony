@@ -5,7 +5,6 @@
         <div class="absolute z-10 p-4 w-full flex flex-row justify-between text-center">
           <div class="w-1/4 border mx-4 h-32">
             <p class="text-xs text-red-dark">TODO: metrics</p>
-            <lineGraph></lineGraph>
           </div>
           <div class="w-1/4 border mx-4 h-32">
             <p class="text-xs text-red-dark">TODO: metrics</p>
@@ -75,9 +74,10 @@
     </div>
     {{ title }}: task, rep, skills, domains; statistics + analytics
     <p>global scope: colony-wide - domain-wide</p>
-    <p>user scope</p>
-    <p>D3js</p>
-    <p>crossfilter</p>
+
+    <div class="w-1/3">
+      <lineGraph></lineGraph>
+    </div>
 
   </div>
 </template>
@@ -91,7 +91,9 @@ export default {
       title: 'insights'
     }
   },
-  component: { lineGraph }
+  components: {
+    lineGraph
+  }
 }
 </script>
 

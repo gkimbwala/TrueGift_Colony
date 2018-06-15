@@ -62,7 +62,7 @@
 
             <div class="mr-2">
               <button
-                @click="active = 'solutions'"
+                @click="active = 'models'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
                 >Solutions
               </button>
@@ -98,7 +98,7 @@ import people from '@/modules/dynamics/people'
 import discourse from '@/modules/discourse/discourse'
 
 import projects from '@/objects/projects/projects'
-import solutions from '@/objects/solutions/solutions'
+import models from '@/objects/models/models'
 import tasks from '@/objects/tasks/workload'
 
 export default {
@@ -113,7 +113,7 @@ export default {
     people,
     discourse,
     projects,
-    solutions,
+    models,
     tasks
   }
 }

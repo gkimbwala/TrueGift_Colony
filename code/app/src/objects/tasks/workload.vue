@@ -16,7 +16,7 @@
       </div>
 
       <div class="w-1/3 p-1">
-        <div v-for="item in items" :key="item" v-if="item.isActive">
+        <div v-for="item in items" :key="item">
           <task :item="item">
             <template slot-scope="item">
             </template>

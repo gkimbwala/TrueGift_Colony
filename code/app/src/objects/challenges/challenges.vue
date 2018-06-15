@@ -11,10 +11,10 @@
             </div>
             <div class="p-2">
               <router-link
-              :to="{ name: 'challenge', params: { id: challenge.id } }"
-              class="no-underline"
-              >{{challenge.title}}
-            </router-link>
+                :to="{ name: 'challenge', params: { id: challenge.id } }"
+                class="no-underline"
+                >{{challenge.title}}
+              </router-link>
             </div>
           </div>
         </card>
@@ -33,8 +33,8 @@ export default {
       return this.$store.getters.getChallenges
     }
   },
-  props: ['id'],
-  components: { card }
+  components: { card },
+  props: ['id']
 }
 </script>
 

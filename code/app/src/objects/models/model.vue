@@ -5,7 +5,7 @@
       <div class="h-80 relative flex flex-row justify-between">
         <div class="absolute z-10 p-4 pin-t w-full flex flex-row justify-between">
           <div class="w-1/3">
-            <p class="text-xs text-red-dark">TODO: challenge.title</p>
+            <p class="text-xs text-red-dark">TODO: model.title</p>
           </div>
           <div class="w-1/3 text-right">
             <p class="text-xs text-red-dark">TODO: user-menu</p>
@@ -54,17 +54,9 @@
 
             <div class="mr-2">
               <button
-                @click="active = 'projects'"
+                @click="active = 'blueprints'"
                 class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Projects
-              </button>
-            </div>
-
-            <div class="mr-2">
-              <button
-                @click="active = 'solutions'"
-                class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
-                >Solutions
+                >Blueprints
               </button>
             </div>
 
@@ -92,14 +84,13 @@
 </template>
 
 <script>
-import insights from '@/modules/dynamics/insights'
+import insights from '@/modules/dynamics/insights/insights'
 import overview from '@/modules/dynamics/overview'
 import people from '@/modules/dynamics/people'
 import discourse from '@/modules/discourse/discourse'
 
-import projects from '@/objects/projects/projects'
-import solutions from '@/objects/solutions/solutions'
-import tasks from '@/objects/tasks/workload'
+import blueprints from '@/objects/blueprints/main'
+import tasks from '@/objects/tasks/main'
 
 export default {
   data () {
@@ -112,8 +103,7 @@ export default {
     insights,
     people,
     discourse,
-    projects,
-    solutions,
+    blueprints,
     tasks
   }
 }

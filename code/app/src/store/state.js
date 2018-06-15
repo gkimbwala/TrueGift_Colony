@@ -107,10 +107,10 @@ export default {
       { id: 4, title: 'Item 5' }
     ],
 
-    // challengeId in the solutions model may be better as an ['Array']
+    // challengeId in the models may be better as an ['Array']
     // due to having a many-to-one relationship from solution to challenges
 
-    solutions: [
+    models: [
       {
         'id': 0,
         'title': 'Renewable Energy',

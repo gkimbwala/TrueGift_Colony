@@ -24,8 +24,8 @@ export default new Vuex.Store({
     getChallenges: state => {
       return state.data.challenges
     },
-    getSolutions: state => {
-      return state.data.solutions
+    getModels: state => {
+      return state.data.models
     },
     getProjects: state => {
       return state.data.projects

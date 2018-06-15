@@ -2,7 +2,7 @@
   <div class="">
 
     <div class="">
-      <div v-for="item in items" :key="item">
+      <div v-for="item in items" :key="item.id">
         <activity :item="item">
           <template slot-scope="item">
           </template>

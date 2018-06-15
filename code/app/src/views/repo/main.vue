@@ -3,11 +3,25 @@
     <div class="w-full bg-grey-lightest p-2 flex flex-row justify-between items-center text-xs">
 
       <div class="w-1/3">
-        <button
-          @click="active = 'challengeList'"
+        <router-link
+          :to="{ name: 'challenges' }"
           class="text-grey-dark p-2 text-xs hover:text-grey-darker"
+          tag="button"
           >Challenges
-        </button>
+        </router-link>
+        <router-link
+          :to="{ name: 'models' }"
+          class="text-grey-dark p-2 text-xs hover:text-grey-darker"
+          tag="button"
+          >Models
+        </router-link>
+        <router-link
+          :to="{ name: 'projects' }"
+          class="text-grey-dark p-2 text-xs hover:text-grey-darker"
+          tag="button"
+          >Projects
+        </router-link>
+
       </div>
 
       <div class="w-1/3 text-right">
@@ -16,26 +30,14 @@
 
     </div>
 
-    <div class="">
-      <component :is="active">
-      </component>
-    </div>
+    <router-view></router-view>
 
   </div>
 </template>
 
 <script>
-import challengeList from '@/objects/challenges/challenges'
 
 export default {
-  data () {
-    return {
-      active: 'challengeList'
-    }
-  },
-  components: {
-    challengeList
-  }
 }
 </script>
 
