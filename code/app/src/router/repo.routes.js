@@ -20,12 +20,18 @@ import projects from '@/objects/projects/projects'
 import project from '@/objects/projects/project'
 import projectNav from '@/objects/projects/nav'
 
-// import blueprintMain from '@/objects/blueprints/main'
+import blueprintMain from '@/objects/blueprints/main'
 import blueprints from '@/objects/blueprints/blueprints'
-// import blueprint from '@/objects/blueprints/blueprint'
+import blueprint from '@/objects/blueprints/blueprint'
+import blueprintNav from '@/objects/blueprints/nav'
 
-import jobs from '@/objects/jobs/main'
-import requests from '@/objects/requests/main'
+import courseMain from '@/objects/courses/main'
+import courses from '@/objects/courses/courses'
+import course from '@/objects/courses/course'
+import courseNav from '@/objects/courses/nav'
+
+import jobs from '@/objects/jobs/sub'
+import lessons from '@/objects/lessons/sub'
 
 import tasks from '@/objects/tasks/sub'
 
@@ -151,6 +157,114 @@ export default [
           }
         ]
       },
+      // Blueprint Routes
+      {
+        name: 'repo-blueprints',
+        path: '',
+        component: blueprintMain,
+        children: [
+          {
+            name: 'blueprints',
+            path: 'blueprints',
+            component: blueprints,
+            props: true
+          },
+          {
+            name: 'blueprint',
+            path: '/blueprint/:id',
+            components: {
+              default: blueprint,
+              'blueprint-nav': blueprintNav
+            },
+            children: [
+              {
+                name: 'blueprint-discourse',
+                path: 'discourse',
+                component: discourse
+              },
+              {
+                name: 'blueprint-insights',
+                path: 'insights',
+                component: insights
+              },
+              {
+                name: 'blueprint-overview',
+                path: 'overview',
+                component: overview
+              },
+              {
+                name: 'blueprint-people',
+                path: 'people',
+                component: people
+              },
+              {
+                name: 'blueprint-courses',
+                path: 'courses',
+                component: courses
+              },
+              {
+                name: 'blueprint-tasks',
+                path: 'tasks',
+                component: tasks
+              }
+            ]
+          }
+        ]
+      },
+      // Course Routes
+      {
+        name: 'repo-courses',
+        path: '',
+        component: courseMain,
+        children: [
+          {
+            name: 'courses',
+            path: 'courses',
+            component: courses,
+            props: true
+          },
+          {
+            name: 'course',
+            path: '/course/:id',
+            components: {
+              default: course,
+              'course-nav': courseNav
+            },
+            children: [
+              {
+                name: 'course-discourse',
+                path: 'discourse',
+                component: discourse
+              },
+              {
+                name: 'course-insights',
+                path: 'insights',
+                component: insights
+              },
+              {
+                name: 'course-overview',
+                path: 'overview',
+                component: overview
+              },
+              {
+                name: 'course-people',
+                path: 'people',
+                component: people
+              },
+              {
+                name: 'course-lessons',
+                path: 'lessons',
+                component: lessons
+              },
+              {
+                name: 'course-tasks',
+                path: 'tasks',
+                component: tasks
+              }
+            ]
+          }
+        ]
+      },
       // Project Routes
       {
         name: 'repo-projects',
@@ -195,11 +309,6 @@ export default [
                 name: 'project-jobs',
                 path: 'jobs',
                 component: jobs
-              },
-              {
-                name: 'project-requests',
-                path: 'requests',
-                component: requests
               },
               {
                 name: 'project-tasks',

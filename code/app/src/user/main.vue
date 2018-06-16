@@ -2,38 +2,38 @@
   <div class="">
     <div class="w-full bg-grey-lightest p-2 flex flex-row justify-between items-center text-xs">
 
-      <div class="w-1/3">
+      <div class="w-1/2">
+
         <router-link
           :to="{ name: 'user-activity' }"
-          @click="active = 'userActivity'"
           class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
           tag="button"
           >Activity
         </router-link>
 
         <router-link
-          :to="{ name: 'user-insights' }"
-          @click="active = 'userInsights'"
+          :to="{ name: 'user-network' }"
           class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
           tag="button"
-          >Insights
+          >Network
         </router-link>
 
         <router-link
-          :to="{ name: 'user-tasks' }"
-          @click="active = 'userTasks'"
+          :to="{ name: 'user-profile' }"
           class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
           tag="button"
-          >Tasks
+          >Profile
         </router-link>
 
-      </div>
-
-      <div class="w-1/3 text-center">
+        <router-link
+          :to="{ name: 'user-stats' }"
+          class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
+          tag="button"
+          >Statistics
+        </router-link>
 
         <router-link
-          :to="{ name: 'user-workflow', params: { name: user.fName } }"
-          @click="active = 'devWorkflow'"
+          :to="{ name: 'user-workflow' }"
           class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
           tag="button"
           >Workflow

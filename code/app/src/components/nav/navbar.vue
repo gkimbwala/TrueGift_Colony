@@ -2,7 +2,7 @@
   <nav class="sticky pin-t bg-grey-lightest p-2 items-center z-20 shadow">
     <div class="container m-auto flex flex-row justify-between">
 
-      <div class="w-2/3 text-left">
+      <div class="w-1/3 text-left">
         <router-link
           :to="{ name: 'main' }"
           class="text-grey-darker text-lg no-underline mx-2"
@@ -18,13 +18,17 @@
           class="text-grey text-sm mr-2 no-underline hover:text-grey-darker"
           >Repo
         </router-link>
+      </div>
+
+      <div class="w-1/3 text-center">
         <router-link
-          :to="{ name: 'discourse' }"
+          :to="{ name: 'user', params: { name: user.fName } }"
           class="bg-grey-darker p-1 rounded-sm text-xs text-grey-lightest shadow-inner no-underline hover:bg-grey-darkest"
           tag="button"
-          >Discourse
+          >{{ user.fName }}
         </router-link>
       </div>
+
       <div class="w-1/3 text-right">
         <!-- TODO: search icon / @click / transition -->
         <button class="bg-grey p-1 text-xs text-grey-darkest font-medium rounded-sm shadow-inner">Status</button>
@@ -33,12 +37,7 @@
           :to="{ name: 'search' }"
           class="bg-grey-lighter p-1 text-xs text-grey-darkest font-medium rounded-sm shadow-inner"
           tag="button"
-          >S</router-link>
-        <router-link
-          :to="{ name: 'user', params: { name: user.fName } }"
-          class="bg-grey-darker p-1 rounded-sm text-xs text-grey-lightest shadow-inner no-underline hover:bg-grey-darkest"
-          tag="button"
-          >{{ user.fName }}
+          >S
         </router-link>
       </div>
     </div>

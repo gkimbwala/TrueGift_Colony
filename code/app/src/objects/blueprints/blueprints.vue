@@ -10,7 +10,7 @@
         <card>
           <p class="text-sm text-red-dark">TODO: Card</p>
           <div class="h-64 border border-grey-dark mb-4 mr-4">
-            <div class="bg-purple-light h-48">
+            <div class="bg-orange-lighter h-48">
               blueprint.img
             </div>
             <div class="p-2">
@@ -37,10 +37,8 @@ export default {
       return this.$store.getters.getModels
     }
   },
-  props: ['id'],
-  components: {
-    card
-  }
+  components: { card },
+  props: ['id']
 }
 </script>
 

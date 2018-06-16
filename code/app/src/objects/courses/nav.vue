@@ -6,7 +6,7 @@
       <div class="flex flex-row text-xs">
         <div class="mr-2">
           <router-link
-            :to="{ name: 'project-discourse' }"
+            :to="{ name: 'course-discourse' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
             >Discourse
@@ -14,7 +14,7 @@
         </div>
         <div class="mr-2">
           <router-link
-            :to="{ name: 'project-insights' }"
+            :to="{ name: 'course-insights' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
             >Insights
@@ -22,7 +22,7 @@
         </div>
         <div class="mr-2">
           <router-link
-            :to="{ name: 'project-overview' }"
+            :to="{ name: 'course-overview' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
             >Overview
@@ -30,7 +30,7 @@
         </div>
         <div class="">
           <router-link
-            :to="{ name: 'project-people' }"
+            :to="{ name: 'course-people' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
             >People
@@ -41,17 +41,17 @@
 
     <div class="w-1/2 absolute z-10 py-2 px-4 pin-t pin-r text-right">
       <div class="flex flex-row justify-end text-xs">
-        <div class="mr-2">
+        <div class="">
           <router-link
-            :to="{ name: 'project-jobs' }"
+            :to="{ name: 'course-lessons' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
-            >Jobs
+            >Lessons
           </router-link>
         </div>
         <div class="">
           <router-link
-            :to="{ name: 'project-tasks' }"
+            :to="{ name: 'course-tasks' }"
             class="text-grey-dark p-2 rounded-sm text-xs hover:text-grey-darker"
             tag="button"
             >Tasks

@@ -2,7 +2,7 @@
   <div>
     <div class="w-full h-80 bg-grey-lighter border border-grey-light rounded-b relative">
 
-        <router-view name="blueprint-nav"></router-view>
+        <router-view name="course-nav"></router-view>
 
         <focus-bar></focus-bar>
 

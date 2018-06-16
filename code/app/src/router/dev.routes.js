@@ -38,7 +38,7 @@ export default [
   },
   {
     name: 'create-task',
-    path: 'task/create',
+    path: '/create',
     component: createTask
   },
   {

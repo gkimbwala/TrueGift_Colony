@@ -2,7 +2,7 @@
   <div class="p-4">
 
     <div class="text-lg">
-      Courses: focus is on design
+      Courses: design components
     </div>
 
     <div class="flex flex-row flex-wrap py-4">
@@ -10,7 +10,7 @@
         <card>
           <p class="text-sm text-red-dark">TODO: Card</p>
           <div class="h-64 border border-grey-dark mb-4 mr-4">
-            <div class="bg-purple-light h-48">
+            <div class="bg-orange-lighter h-48">
               course.img
             </div>
             <div class="p-2">
@@ -34,13 +34,11 @@ import card from '@/components/elements/card'
 export default {
   computed: {
     courses () {
-      return this.$store.getters.getSolutions
+      return this.$store.getters.getModels
     }
   },
-  props: ['id'],
-  components: {
-    card
-  }
+  components: { card },
+  props: ['id']
 }
 </script>
 
